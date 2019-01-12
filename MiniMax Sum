@@ -1,0 +1,33 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the miniMaxSum function below.
+def miniMaxSum(arr):
+
+    maximum=max(arr)
+    minumum=min(arr)
+    
+    aMin=arr.copy()
+    #print(aMin)
+    aMin.remove(maximum)
+    sum(aMin)
+    
+    
+    aMax=arr.copy()
+    #print(aMax)
+    aMax.remove(minumum)
+    sum(aMax)
+    print(sum(aMin),sum(aMax))
+    sumArray=[sum(aMin),sum(aMax)]
+    #return sumArray
+    
+
+if __name__ == '__main__':
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
