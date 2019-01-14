@@ -1,0 +1,29 @@
+#!/bin/python3
+
+import os
+import sys
+
+#
+# Complete the timeConversion function below.
+#
+def timeConversion(s):
+    strr=s.split(":")
+    if(strr[2][2:4]=='AM'):
+       hours=int(strr[0])
+       if(hours==12):
+         hours=00
+    else:
+       hours=12+int(strr[0])%12
+    return("%02d"%hours+":"+strr[1]+":"+strr[2][0:2])
+
+
+if __name__ == '__main__':
+    f = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = timeConversion(s)
+
+    f.write(result + '\n')
+
+    f.close()
